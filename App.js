@@ -1,13 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TextInput, TouchableHighlight, TouchableOpacity} from 'react-native';
-import { Signin_screen } from './screen/Signin_screen';
-import { Shipping_billing } from './screen/Shipping_billing';
+// import { StatusBar } from 'expo-status-bar';
+import { View } from 'react-native';
+import React from 'react';
+// // import { Signin_screen } from './screen/Signin_screen';
+// // import { Shipping_billing } from './screen/Shipping_billing';
+// import  Photos  from './screen/photos';
+import Photoes from "./screen/Photoes";
 
-export default function App(){
+const App=()=>{
  
   return (
-    <Signin_screen/>
-    // <Shipping_billing/>
+    <View>
+      {/* // <Shipping_billing/> */}
+      <Photoes />
+
+      {/* // <Signin_screen/> */}
+    </View>    
   );
 }
+export default App
  
