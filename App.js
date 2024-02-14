@@ -6,8 +6,8 @@ import { Shipping_billing } from './screen/Shipping_billing';
 export default function App(){
  
   return (
-    // <Signin_screen/>
-    <Shipping_billing/>
+    <Signin_screen/>
+    // <Shipping_billing/>
   );
 }
  

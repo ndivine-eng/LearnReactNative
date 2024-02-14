@@ -1,131 +1,61 @@
-import { StatusBar } from "expo-status-bar";
-import { CheckBox } from "react-native-elements";
-import Icon from 'react-native-vector-icons/FontAwesome';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
-import React from "react";
-import { StyleSheet, View, Text, TouchableOpacity, TextInput } from "react-native";
+import { StatusBar } from 'expo-status-bar';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import React from 'react'
+import {Icon} from "react-native-elements";
+import { AntDesign, Entypo, FontAwesome } from "react-native-vector-icons"
+import { TextInput, Checkbox } from "react-native-paper"
 
 export const Signin_screen = () => {
     return (
-        <View style={styles.container}>
-            {/* this is header */}
-            <View> 
-                <Text style={{fontSize: 30, fontWeight: 'bold', marginTop: 50}} >Sign In</Text> 
+        <View>
+<ScrollView>
+
+            <TouchableOpacity>
+                <Entypo name='cross' size={20} style={{ marginTop: 50, marginLeft: 30, }} />
+            </TouchableOpacity>
+            <View style={{ alignItems: 'center' }}>
+
+                <Text style={{ marginTop: 5, fontSize: 25, fontWeight: '500' }}>Sign ln</Text>
+                <Text style={{ marginTop: 10, fontWeight: '300', fontSize: 15 }}>Welcome back! Please enter your details</Text>
             </View>
-            <Text>Welcome Back! Please enter your details</Text>
-
-            <StatusBar style="auto" />
-
-            {/* this is body */}
             <View>
-                <TouchableOpacity style={{display: 'flex', flexDirection: 'row', gap: 10, width: 300, borderWidth: 1, borderColor: '#EFECEC', borderRadius: 10, padding: 15, marginTop: 20,}} >
-                    <AntDesign name= "home" size={30} color="black" style={{color:'pink'}}></AntDesign>
-                    <TextInput placeholder= "divine@gmail.com"></TextInput>
-                </TouchableOpacity>
+
+                <TextInput label="Email" mode="offline" left={<TextInput.Icon color={'violet'} size={15} icon={"email-outline"} style={{backgroundColor:'#FF9BD2'}}  />} style={{ marginTop: 10, width: 300, alignSelf: 'center', backgroundColor: '#EEF5FF', }} />
+                <TextInput label="Password" mode="offline" secureTextEntry left={<TextInput.Icon color={'#40A2E3'} size={15} icon={"lock-outline"} style={{ backgroundColor: '#BFCFE7' }} />} style={{ marginTop: 15, width: 300, alignSelf: 'center', backgroundColor: '#EEF5FF',}} />
             </View>
-            <View style={{display: 'flex', flexDirection: 'row', gap: 10, width: 300, borderWidth: 1, borderColor: '#EFECEC', borderRadius: 10, padding: 15, marginTop: 20}}>
-                <SimpleLineIcons name="lock-open" size={30} color="black" style={{color:'#40A2D8'}}></SimpleLineIcons>
-                <TextInput secureTextEntry placeholder="Password" />
+            <View style={{ marginTop: 15, display: 'flex', flexDirection: 'row',alignItems:'center', marginLeft: 30}}>
+            <Checkbox status='unchecked' />
+            <Text>Remember Me</Text>
             </View>
-
-            <View style={{marginTop: 20,}}>
-                <CheckBox title="Remember me" style = {styles.checkbox} />
-            </View>
-
-            {/* This is footer */}
-
-            
-                
-                <View style={{marginBottom: 3}}>
-                    <TouchableOpacity>
-                        <Text style={styles.forgot}>Forgot Password?</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <View>
-                    <TouchableOpacity >
-                        <Text style={{color:'white', borderRadius:10, backgroundColor:'#40A2E3', fontSize: 20, fontWeight: 'bold', padding: 10,width: 300, justifyContent: 'center', alignItems: 'center',}}>Sign In</Text>
-                    </TouchableOpacity>
-                </View>
-                <View >
-                    <TouchableOpacity style={styles.create}>
-                        <Text style> create Account</Text>
-                        <Text style={{color:'#FF9843'}}>Sign Up</Text>
-                    </TouchableOpacity>
-                    
-            
-
-            </View>
-
-            <View style={styles.icons}>
-                <TouchableOpacity>
-                    <Icon name="facebook" size={30} color="blue" />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Icon name="google" size={30} color="red" />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Icon name="apple" size={30} color="black" />
-                </TouchableOpacity>
                 
 
+            <View style={{ marginTop: 90, alignItems: 'center' }}>
+                <Text style={{ color: '#40A2E3', padding: 10, fontWeight: '500', fontSize: 18 }}>Forgot Password</Text>
+                <TouchableOpacity>
+                    <Text style={{ backgroundColor: '#40A2E3', color: 'white', borderRadius: 20, padding: 15, width: 290, textAlign: 'center', fontSize: 20, fontWeight: '500' }}>Sign ln</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{ marginTop: 25, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <TouchableOpacity>
+                    <Text style={{ fontSize: 15, fontWeight: '400', marginLeft: 40 }}>Create account</Text>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text style={{ marginRight: 40, color: 'orange', borderWidth: 1, borderColor: '#EEEDEB', backgroundColor: '#EEEDEB', borderRadius: 15, padding: 5, width: 70, textAlign: 'center', fontSize: 15, fontWeight: '400' }}>Sign Up</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', padding: 70, }}>
+
+                <Icon name="facebook" size={30} color="blue" style={{ borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF', marginLeft: 20 }} />
+                <AntDesign name='google' size={24} color="red" style={{marginTop:3, borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF' }} />
+                <Icon name="apple" size={30} color="black" style={{ borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF', marginRight: 30 }} />
             </View>
 
 
 
-            
+                <StatusBar style="auto" />
+                </ScrollView>
         </View>
-    );
-};
 
-const styles = StyleSheet.create({
-    container: {
-      // flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'center',
-      
 
-    },
-
-    checkbox: {
-        backgroundColor:'#FFF6E9',
-        borderColor:'#FFF6E9',
-        marginLeft:30,
-        fontWeight:'300',
-        
-        
-      
-    },
-    
-    forgot: {
-        color: 'skyblue', 
-        fontSize: 20,
-        fontWeight: 'bold',
-        marginTop: '45%',
-
-           
-    },
-    create: {
-        display: 'flex',
-        flexDirection:'row',
-        justifyContent: 'space-between',
-        gap: 50,
-        padding: 10
-    },
-    
-    icons: {
-        display: 'flex',
-        flexDirection:'row',
-        gap:50,
-        marginTop:50,
-        justifyContent:'space-between'
-      
-    
-    }
-
-    
-  });
-  
-export default Signin_screen
+    )
+}

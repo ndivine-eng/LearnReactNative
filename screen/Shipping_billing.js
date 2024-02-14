@@ -4,7 +4,7 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
 import Feather from 'react-native-vector-icons/Feather';
 import Octicons from 'react-native-vector-icons/Octicons';
-import { StyleSheet, Text, View, } from "react-native";
+import { StyleSheet, Text, View,TouchableOpacity, TextInput } from "react-native";
 
 
 export const Shipping_billing = () => {
@@ -40,7 +40,7 @@ export const Shipping_billing = () => {
                 <View style={styles.office}>
                 <FontAwesomeIcon name="home" size={30} color="black" style={{color:'#B31312'}}></FontAwesomeIcon>
                 <Text style={{fontSize: 24, fontWeight: '800'}}>Office</Text>
-                <Feather name="edit-3" size={30} color="black" style={{color:'#59B4C3'}}></Feather>
+                <Feather name="edit-3" size={30} color="black" ></Feather>
                 </View>
 
                 <View style={styles.sunamganj}>
@@ -54,14 +54,39 @@ export const Shipping_billing = () => {
                 </View>
             </View>
 
-            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: 300, padding: 15, marginTop: 20}}>
+            <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: 300, padding: 10, marginTop: 10}}>
                 <Text style={{fontSize: 15, fontWeight: 'bold', marginTop: 10}}>Add new shipping address</Text>
                 <Octicons name="diff-added" size={30} color="black" ></Octicons>
 
             </View>
             <View>
+            <View>
                 <Text style={{fontSize:20, fontWeight: 'bold', marginTop: 10}}>Personal info</Text>
+            
             </View>
+            <View style={styles.person}>
+                <Feather name="phone-call" size={30} color="black"></Feather>
+                <Text style={{fontSize: 15, fontWeight: 'bold', marginTop: 10}}>Billing to the home address</Text>
+
+            </View>
+            <View style={styles.person}>
+                <Feather name="phone-call" size={30} color="black"></Feather>
+                <Text style={{fontSize: 15, fontWeight: 'bold', marginTop: 10}}>07893933</Text>
+
+            </View>
+            <View style={styles.person}>
+                <Feather name="phone-call" size={30} color="black"></Feather>
+                <Text style={{fontSize: 15, fontWeight: 'bold', marginTop: 10}}>divinejh@gmail.com</Text>
+
+            </View>
+
+            </View>
+            <View>
+                <TouchableOpacity>
+                    <Text style={{fontSize: 15, fontWeight: 'bold',backgroundColor:'skyblue' }}>Continue</Text>
+                </TouchableOpacity>
+            </View>
+            
 
             
 
@@ -81,7 +106,7 @@ const styles = StyleSheet.create({
 
     },
     homediv: {
-        marginTop: 60,
+        marginTop: 40,
         borderColor:'#59B4C3',
         borderWidth: 1,
         borderRadius: 10,
@@ -95,7 +120,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 20,
+        marginTop: 10,
         
     },
     sunamganj: {
@@ -105,11 +130,14 @@ const styles = StyleSheet.create({
     },
 
     officedev: {
-        marginTop: 40,
+        marginTop: 20,
         width: 300,
         height: 230,
         padding: 15,
-        backgroundColor:'FFFADD',
+        borderColor:'#f7f7f7',
+        borderRadius: 10,
+        
+        backgroundColor:'#FFDFB7',
         
     },
 
@@ -117,7 +145,13 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 20,
+        marginTop: 10,
+        
+    },
+    person: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         
     }
 });
