@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   },
 
   header: {
-      marginTop: 50,
+      marginTop: 90,
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -43,16 +43,17 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     width: 300,
-    marginTop: 20,
+    marginTop: 110,
+    backgroundColor:'#ffffff'
   
   },
 
   image: {
     width: '48%', 
-    height: 200, 
+    aspectRatio: 1, // Set aspect ratio to 1 to make the images square
     marginBottom: 10,
-    borderRadius: 10,
-    alignSelf:'center'
+    borderRadius: 10, 
+    alignSelf: 'center', 
   },
 });
 
