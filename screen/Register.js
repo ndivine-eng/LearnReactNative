@@ -4,8 +4,10 @@ import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from "rea
 import AntDesign from "react-native-vector-icons/AntDesign"
 import Ionicons from "react-native-vector-icons/Ionicons"
 import React from "react";
+import React, { useState } from "react";
 
 const Register = () => {
+    
     return (
         <ScrollView>
         <View style={{backgroundColor: '#F3F5F6',width: '100%',height: '100%',paddingHorizontal: '6%',paddingTop: '10%',paddingBottom: '6%',}}>
