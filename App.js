@@ -5,7 +5,7 @@ import Login from './screen/Login';
 // import Signin_screen from './screen/Signin_screen'; 
 // import Shipping_billing from './screen/Shipping_billing'; 
 // import Photoes from "./screen/Photoes";
-// import Register from "./screen/Register"; 
+import Register from "./screen/Register"; 
 
 const App = () => {
  
@@ -14,9 +14,9 @@ const App = () => {
       {/* <Shipping_billing/> */}
       {/* <Photoes /> */}
       {/* <Signin_screen/> */}
-      <Login/>
+      {/* <Login/> */}
 
-      {/* <Register/> */}
+      <Register/>
     </View>    
   );
 }
