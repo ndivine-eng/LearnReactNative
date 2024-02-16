@@ -96,15 +96,15 @@ export const Shipping_billing = () => {
     );
 };
   
-const styles = StyleSheet.create({
-    container: {
-      // flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'center',
-      
+    const styles = StyleSheet.create({
+        container: {
+        // flex: 1,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
+        
 
-    },
+        },
     homediv: {
         marginTop: 40,
         borderColor:'#59B4C3',
