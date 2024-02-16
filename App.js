@@ -8,17 +8,27 @@ const Stack = createNativeStackNavigator();
 import Login from './screen/Login'; 
 import Shipping_billing from './screen/Shipping_billing'; 
 import Photoes from "./screen/Photoes";
-import Register from "./screen/Register"; 
+// import Register from "./screen/Register"; 
+
 import Home from "./screen/Home";
+
 export const App=()=>{
  
   return (
-    <NavigationContainer>
-    <Stack.Navigator initialRouteName="login">
-      <Stack.Screen name="rogin" component={Login}/>
-      <Stack.Screen  name="register" component={Register}/>
-    </Stack.Navigator>
-  </NavigationContainer>
+  //   <NavigationContainer>
+  //   <Stack.Navigator initialRouteName="login">
+  //     <Stack.Screen name="rogin" component={Login}/>
+  //     <Stack.Screen  name="register" component={Register}/>
+  //     <Stack.Screen name="home" component={Home}/>
+  //     <Stack.Screen name="shipping_billing" component={Shipping_billing}/>
+  //     <Stack.Screen name="photoes" component={Photoes}/>
+  //   </Stack.Navigator>
+  // </NavigationContainer>
+  <View>
+    
+    <Home/>
+
+  </View>
   );
 };
 
