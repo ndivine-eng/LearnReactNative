@@ -9,7 +9,7 @@ import Login from './screen/Login';
 import Shipping_billing from './screen/Shipping_billing'; 
 import Photoes from "./screen/Photoes";
 import Register from "./screen/Register"; 
-// import Home from "./screen/Home";
+import Home from "./screen/Home";
 export const App=()=>{
  
   return (
