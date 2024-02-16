@@ -6,7 +6,7 @@ import { TextInput } from "react-native-paper";
 import { Icon } from "react-native-elements";
 import { AntDesign } from "react-native-vector-icons";
 
-const Login = () => {
+const Login = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -59,8 +59,15 @@ const Login = () => {
                 <TouchableOpacity onPress={() => Alert.alert('Forgot Password', 'Feature under development.')}>
                     <Text style={{ color: '#40A2E3', padding: 10, fontWeight: '500', width: 200, fontSize: 18 }}>Forgot Password</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={handleLogin}>
-                    <Text style={{ backgroundColor: '#010101', color: 'white', borderRadius: 20, padding: 10, width: 100, textAlign: 'center', fontSize: 20, fontWeight: '500' }}>Login</Text>
+                <TouchableOpacity onPress={() =>
+        navigation.navigate('register')
+      }>
+                    <Text 
+                    style={{ backgroundColor: '#010101', color: 'white', borderRadius: 20, padding: 10, width: 100, textAlign: 'center', fontSize: 20, fontWeight: '500' }}
+                    
+                    >
+                        Login
+                        </Text>
                 </TouchableOpacity>
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: 300, marginTop: 40 }}>
