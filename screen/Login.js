@@ -28,31 +28,31 @@ const Login = () => {
 
     return (
         <View style={styles.container}>
-            <View style={{ marginTop: 50 }}>
+            <View style={{ marginTop: 20 }}>
                 <Image source={require('../assets/rob2.jpg')} />
             </View>
             <View style={{ alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 30, fontWeight: 'bold', marginTop: 20, marginBottom: 8 }}>Login</Text>
             </View>
             <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <Octicons name="person" size={15} color="orange" />
+              
                 <TextInput
                     label="Email"
                     mode="offlined"
                     keyboardType="email-address"
                     value={email}
                     onChangeText={text => setEmail(text)}
-                    left={<TextInput.Icon color={'violet'} size={15} icon={"email-outline"} style={{backgroundColor:'#FF9BD2'}}  />}
-                    style={{ marginTop: 5, width: 300, alignSelf: 'center' }}
+                    left={<TextInput.Icon icon={'account-outline'} color='#F6A035' style={{backgroundColor: '#FDE8EA', marginLeft: '30%',}} />}
+                    style={{ marginTop: 5, width: 300, alignSelf: 'center',backgroundColor: '#EEF5FF', }}
                 />
                 <TextInput
                     label="Password"
-                    mode="outlined"
+                    mode="offlined"
                     secureTextEntry
                     value={password}
                     onChangeText={text => setPassword(text)}
                     left={<TextInput.Icon color={'#40A2E3'} size={15} icon={"lock-outline"} style={{ backgroundColor: '#BFCFE7' }} />} 
-                    style={{ marginTop: 15, width: 300, alignSelf: 'center', backgroundColor: '#EEF5FF', }}
+                    style={{ marginTop: 5, width: 300, alignSelf: 'center',backgroundColor: '#EEF5FF', }}
                 />
             </View>
             <View style={{ marginTop: 15, display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: 30 }}>
@@ -64,7 +64,7 @@ const Login = () => {
                 </TouchableOpacity>
             </View>
             <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: 300, marginTop: 40 }}>
-                <Icon name="facebook" size={30} color="blue" style={{ borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF', marginLeft: 20 }} />
+                <Icon name="facebook" size={30} color="#216CD3" style={{ borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF', marginLeft: 20 }} />
                 <AntDesign name='google' size={24} color="red" style={{ marginTop: 3, borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF' }} />
                 <Icon name="apple" size={30} color="black" style={{ borderWidth: 1, borderColor: 'white', borderRadius: 80, padding: 10, backgroundColor: '#EEF5FF', marginRight: 30 }} />
             </View>

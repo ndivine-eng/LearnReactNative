@@ -15,7 +15,7 @@ const Register = () => {
          <View style={{display: 'flex',flexDirection: 'column', alignItems: 'center',gap: 15,}}>
                 <Text style={{fontSize: 25,fontWeight: 'bold',}}>Register</Text>
                 <TextInput
-                    style={{width: '100%',display: 'flex',flexDirection: 'row',alignItems: 'center',backgroundColor: 'white',paddingLeft: '2%',borderTopLeftRadius: 30,borderTopRightRadius: 30,borderRadius: 30,borderBottomWidth: 0,height: 50,marginTop: 10,}}
+                    style={{width: '100%',display: 'flex',flexDirection: 'row',alignItems: 'center',backgroundColor: 'white',paddingLeft: '2%',borderTopLeftRadius: 30,borderTopRightRadius: 30,borderRadius: 30,borderBottomWidth: 0,height: 50,}}
                     mode="flat"
                     underlineColor="white"
                     placeholder="Username" placeholderTextColor={'#B8B7C0'}
@@ -23,7 +23,7 @@ const Register = () => {
                 />
 
                 <TextInput
-                    style={{width: '100%',display: 'flex',flexDirection: 'row',alignItems: 'center',backgroundColor: 'white',paddingLeft: '2%',borderTopLeftRadius: 30,borderTopRightRadius: 30,orderRadius: 30,borderBottomWidth: 0,height: 50,}}
+                    style={{width: '100%',display: 'flex',flexDirection: 'row',alignItems: 'center',backgroundColor: 'white',paddingLeft: '2%',borderTopLeftRadius: 30,borderTopRightRadius: 30,borderRadius: 30,borderBottomWidth: 0,height: 50,}}
                     mode="flat"
                     underlineColor="white"
                     placeholder="Email" placeholderTextColor={'#B8B7C0'}
