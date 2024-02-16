@@ -38,9 +38,11 @@ const Login = () => {
                 <Octicons name="person" size={15} color="orange" />
                 <TextInput
                     label="Email"
-                    mode="outlined"
+                    mode="offlined"
+                    keyboardType="email-address"
                     value={email}
                     onChangeText={text => setEmail(text)}
+                    left={<TextInput.Icon color={'violet'} size={15} icon={"email-outline"} style={{backgroundColor:'#FF9BD2'}}  />}
                     style={{ marginTop: 5, width: 300, alignSelf: 'center' }}
                 />
                 <TextInput
@@ -49,6 +51,7 @@ const Login = () => {
                     secureTextEntry
                     value={password}
                     onChangeText={text => setPassword(text)}
+                    left={<TextInput.Icon color={'#40A2E3'} size={15} icon={"lock-outline"} style={{ backgroundColor: '#BFCFE7' }} />} 
                     style={{ marginTop: 15, width: 300, alignSelf: 'center', backgroundColor: '#EEF5FF', }}
                 />
             </View>
